@@ -23,7 +23,7 @@ let createEmployeeRecords = empArrs => {
     return empCollection;
 };
 
-let createTimeInEvent = (timeStamp) => {
+let createTimeInEvent = function(timeStamp) {
     let timeObj = {
         type: "TimeIn",
         hour: parseInt(timeStamp.split(" ")[1]),
