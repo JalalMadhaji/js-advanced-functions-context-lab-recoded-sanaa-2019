@@ -24,12 +24,12 @@ let createEmployeeRecords = empArrs => {
 };
 
 let createTimeInEvent = function(timeStamp) {
-    let time = timeStamp.split(' ');
+    let time = this.timeStamp.split(' ');
     let timeObj = {
         type: "TimeIn",
         hour: parseInt(time[1]),
-        date: time[0]
-    };
+        date: time[0],
+    }
     return this.timeInEvents.push(timeObj);
   //   let newObj = Object.assign({},this);
   // let timeParts = timeStamp.split(' ');
