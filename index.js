@@ -47,7 +47,7 @@ let createTimeOutEvent = function(timeStamp) {
     return newObj;
 };
 
-let hoursWorkedOnDate = (dateStamp) {
+let hoursWorkedOnDate = function(dateStamp) {
     let start = this.timeInEvents.find(rec => rec.date === dateStamp);
     let end = this.timeOutEvents.find(rec => rec.date === dateStamp);
 
@@ -87,7 +87,7 @@ let findEmployeeByFirstName = function(srcArray, firstName) {
     });
 };
 
-let calculatePayroll = (array) {
+let calculatePayroll = function(array) {
     return array.reduce((m, e) => m + allWagesFor(e), 0);
 };
 
