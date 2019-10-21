@@ -65,12 +65,12 @@ let hoursWorkedOnDate = function(dateStamp) {
 
     let sum = endH - startH;
     return sum;
-};
+}
 
 let wagesEarnedOnDate = function(dateStamp) {
     let pay = hoursWorkedOnDate(dateStamp);
     return pay * this.payPerHour;
-};
+}
 
 // let allWagesFor = () => {
 //     let sum = [];
@@ -85,11 +85,11 @@ let findEmployeeByFirstName = function(srcArray, firstName) {
     return srcArray.find(function(emp) {
         return emp.firstName == firstName;
     });
-};
+}
 
 let calculatePayroll = function(array) {
     return array.reduce((m, e) => m + allWagesFor(e), 0);
-};
+}
 
 /*
  We're giving you this function. Take a look at it, you might see some usage
