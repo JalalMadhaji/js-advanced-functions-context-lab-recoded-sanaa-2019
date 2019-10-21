@@ -37,14 +37,14 @@ let createTimeInEvent = function(timeStamp) {
 
 let createTimeOutEvent = function(timeStamp) {
   let newObj = Object.assign({},this);
-  let timeParts = timeStamp.split(' ');
-    let timeInObj = {
-        type: "TimeOut",
-        date: timeParts[0],
-        hour: parseInt(timeParts[1])
-    }
-    newObj.timeInEvents.push(timeInObj);
-    return newObj;
+let timeParts = timeStamp.split(' ');
+let timeInObj = {
+  type:"TimeOut",
+  date: timeParts[0],
+  hour: parseInt(timeParts[1])
+}
+newObj.timeInEvents.push(timeInObj);
+return newObj;
 }
 
 let hoursWorkedOnDate = function(dateStamp) {
