@@ -45,7 +45,7 @@ let createTimeOutEvent = function(timeStamp) {
     }
     newObj.timeInEvents.push(timeInObj);
     return newObj;
-};
+}
 
 let hoursWorkedOnDate = function(dateStamp) {
     let start = this.timeInEvents.find(rec => rec.date === dateStamp);
