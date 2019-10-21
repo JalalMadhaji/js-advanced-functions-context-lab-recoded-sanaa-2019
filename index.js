@@ -43,7 +43,7 @@ let timeInObj = {
   date: timeParts[0],
   hour: parseInt(timeParts[1])
 }
-newObj.timeInEvents.push(timeInObj);
+newObj.timeOutEvents.push(timeInObj);
 return newObj;
 }
 
