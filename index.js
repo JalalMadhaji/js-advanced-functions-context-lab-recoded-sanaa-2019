@@ -23,24 +23,24 @@ let createEmployeeRecords = empArrs => {
     return empCollection;
 };
 
-let createTimeInEvent = function(this,timeStamp) {
-    let time = timeStamp.split(' ');
-    console.log(time);
-    let timeObj = {
-        type: "TimeIn",
-        hour: parseInt(time[1]),
-        date: time[0],
-    }
-    return this.timeInEvents.push(timeObj);
-  //   let newObj = Object.assign({},this);
-  // let timeParts = timeStamp.split(' ');
-  // let timeInObj = {
-  //   type:"TimeIn",
-  //   date: timeParts[0],
-  //   hour: parseInt(timeParts[1])
-  // }
-  // newObj.timeInEvents.push(timeInObj);
-  // return newObj;
+let createTimeInEvent = function(timeStamp) {
+    // let time = timeStamp.split(' ');
+    // console.log(time);
+    // let timeObj = {
+    //     type: "TimeIn",
+    //     hour: parseInt(time[1]),
+    //     date: time[0],
+    // }
+    // return this.timeInEvents.push(timeObj);
+    let newObj = Object.assign({},this);
+  let timeParts = timeStamp.split(' ');
+  let timeInObj = {
+    type:"TimeIn",
+    date: timeParts[0],
+    hour: parseInt(timeParts[1])
+  }
+  newObj.timeInEvents.push(timeInObj);
+  return newObj;
 }
 
 let createTimeOutEvent = timeStamp => {
